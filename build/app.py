@@ -1,4 +1,7 @@
-a = 1
-b= 2
-resultado = (a+b)
-print("el resultado es:"+resultado)
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<h1>hola mundo desde flask</h1>"
